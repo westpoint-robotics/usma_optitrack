@@ -15,12 +15,12 @@ Required:
 5. Open View -> Data Streaming
    - Assign each rigid body a unique "Name" field (found in the lower left corner). This is the ID that mocap\_optitrack will use to identify them and the ROS topic they will be published to.
    - If an offset is required, click the "Transformation" tab (again in the lower left corner) and offset the pivot points of rigid bodies to reflect actual positions of the object they represent.
-   - As a sanity check, click the "Real-Time Info" tab and move your rigid body to see that it is moving as expected. (The axes on this computer will not be the same as those published to ROS so don't worry if these axes are not aligned as desired).
+   - To ensure data is streaming properly, click the "Real-Time Info" tab then move your rigid body and observe if it is moving as expected. (The axes on this computer will not be the same as those published to ROS so don't worry if these axes are not aligned as desired).
    - In the "Data Streaming" portion (on the righthand side of the window), ensure that the "VRPN Streaming Engine - Broadcast Frame Data" is enabled. ![alt tag](Pictures/DataStream.png) 
    - Still in the "Data Streaming" section, scroll through the "Optitrack Streaming Engine" portion. The inputs should match the following  
    ![alt tag](Pictures/DataStreamcropped.png) ![alt tag](Pictures/BroadcastVRPN.png)  
    The most important fields (and the ones that require change from their possible default setting) are "Stream Unlabled Markers" should be "False", "Stream Rigid Bodies" - "True", "Up Axis" - "Z Up" (this will cause a rotation about the X Axis to get Z Up), and the "Multicast Interface" should have the address 192.168.200.XX (this is the DS3 network).
-6. Switch to Ubuntu
+6. Switch to Ubuntu computer
 
 ## Base station setup [[ref]](http://wiki.ros.org/vrpn_client_ros)
 On a laptop with Ubuntu 16.04 and ROS Kinetic:
