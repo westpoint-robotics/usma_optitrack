@@ -11,7 +11,7 @@ Required:
    - There is a delay between turning on the cameras and the connection to Motive. Once the lights on the lower right corner of the cameras are blinking, they can be connected to Motive.
 2. Open existing project and select calibration file (March 2018 file works well for general purposes). At this point, the blue lights on the cameras should activate.
 3. Select Capture Layout found in the upper righthand corner shown below. ![alt tag](Pictures/Capture.png)
-4. Click and drag over the markers of a single body. Right click on the selected body and choose Rigid Body -> Create New Rigid Body. Repeat for all desired bodies. (keep in mind that the orientation they are created in will be used as no rotation).
+4. Click and drag over the markers of a single body. Right click on the selected body and choose Rigid Body -> Create From Selected Markers. Repeat for all desired bodies. (keep in mind that the orientation they are created in will be used as no rotation).
 5. Open View -> Data Streaming
    - Assign each rigid body a unique "Name" field (found in the lower left corner). This is the ID that mocap\_optitrack will use to identify them and the ROS topic they will be published to.
    - If an offset is required, click the "Transformation" tab (again in the lower left corner) and offset the pivot points of rigid bodies to reflect actual positions of the object they represent.
