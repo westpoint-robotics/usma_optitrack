@@ -27,13 +27,13 @@ On a laptop with Ubuntu 16.04 and ROS Kinetic:
 1. Clone this repositiory to your catkin workspace
 ``` 
 cd ~/catkin_ws/src
-git clone 
+git clone https://github.com/westpoint-robotics/usma_optitrack.git
 cd ..
 catkin_make
 ```
 2. Ping the IP of the Motive computer using `ping 192.168.200.99`  
    - The IP was 192.168.200.99 when connected to DS3, which is the IP used in the launch file. If there is no response, check the IP of the Motive computer by going to the command terminal and using the command `ipconfig/all` and finding the "IPv4 Address"
-3. Launch the basic.launch file: `roslaunch usma_optitrack sample.launch`
+3. Launch the basic.launch file: `roslaunch usma_optitrack basic.launch`
 4. Data can be visualized using `rosrun rqt_multiplot rqt_multiplot` (Multiplot plugin must be installed for rqt)
    - Go to settings  
    ![alt tag](Pictures/Multiplot1.png)
