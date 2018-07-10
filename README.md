@@ -24,6 +24,9 @@ Required:
 
 ## Base station setup [[ref]](http://wiki.ros.org/vrpn_client_ros)
 On a laptop with Ubuntu 16.04 and ROS Kinetic:
+### Prerequisite
+Must have VRPN client installed. If not already done, enter the command `sudo apt-get install ros-<DISTRO>-vrpn-client-ros` to install
+### Setup
 1. Clone this repositiory to your catkin workspace
 ``` 
 cd ~/catkin_ws/src
