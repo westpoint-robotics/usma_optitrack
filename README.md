@@ -31,6 +31,16 @@ git clone https://github.com/westpoint-robotics/usma_optitrack.git
 cd ..
 catkin_make
 ```
+   - If you receive the following error, try this command from within the usma_optitrack package folder: 
+      `rosdep install --from-paths . `
+```
+>   Could not find a package
+> configuration file provided by "VRPN"
+> with any of   the following names:
+>
+>     VRPNConfig.cmake
+>     vrpn-config.cmake
+```
 2. Ping the IP of the Motive computer using `ping 192.168.200.99`  
    - The IP was 192.168.200.99 when connected to DS3, which is the IP used in the launch file. If there is no response, check the IP of the Motive computer by going to the command terminal and using the command `ipconfig/all` and finding the "IPv4 Address"
 3. Launch the basic.launch file: `roslaunch usma_optitrack basic.launch`
