@@ -16,13 +16,14 @@ class vrpn_logger():
         # ros config
         self.pose_topic = rospy.get_param("~pose_msg","/vrpn_client_node/Ardrone/pose")
         self.topic_sub = rospy.Subscriber(self.pose_topic,PoseStamped,self.mocap_pose_cb)
-        # write file config
-        self.data_logger_filename = rospy.get_param("~filename","/home/benjamin/ros/data/vrpnlog.m")
-        self.data_logger = open(self.data_logger_filename, 'w')
-        self.data_logger.write(("%%filename: {} \n\n").format(self.data_logger_filename))
         # matlab config
         self.matlab_prefix = rospy.get_param("~matlab_prefix","vrpnlog")
         self.msg_seq = 0
+        # write file config
+        self.data_logger_filepath = rospy.get_param("~filepath","/home/benjamin/ros/data/")
+        self.data_logger_filename = self.data_logger_filepath + self.matlab_prefix + ".m"
+        self.data_logger = open(self.data_logger_filename, 'w')
+        self.data_logger.write(("%%filename: {} \n\n").format(self.data_logger_filename))
 
     def mocap_pose_cb(self,msg):
         msg_time = msg.header.stamp.to_sec()
@@ -47,3 +48,4 @@ if __name__ == '__main__':
         rate.sleep()
 
 # end main
+
