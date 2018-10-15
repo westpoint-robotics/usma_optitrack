@@ -43,7 +43,7 @@ class vrpn_logger():
             self.data_logger.write(("{}.pose.time({},1) = {:06.8f};\n").format(self.matlab_prefix, self.msg_seq, self.msg_time))
             self.data_logger.write(("{}.pose.linear({},:) = [{:06.8f} {:06.8f} {:06.8f}];\n").format(self.matlab_prefix, self.msg_seq, position.x, position.y, position.z))
             self.data_logger.write(("{}.pose.angular({},:) = [{:06.8f} {:06.8f} {:06.8f} {:06.8f}];\n").format(self.matlab_prefix, self.msg_seq, orientation.x, orientation.y, orientation.z, orientation.w))
-            self.data_logger.write(("{}.pose.angular({},:) = {:06.8f};\n\n").format(self.matlab_prefix, self.msg_seq, yaw))
+            self.data_logger.write(("{}.pose.yaw({},:) = {:06.8f};\n\n").format(self.matlab_prefix, self.msg_seq, yaw))
 
 if __name__ == '__main__':
     # Initialize the node and name it.
