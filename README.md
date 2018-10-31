@@ -33,6 +33,8 @@ catkin_make
 ```
    - If you receive the following error, try this command from within the usma_optitrack package folder: 
       `rosdep install --from-paths . `
+   - Or:
+      ` sudo apt-get install ros-kinetic-vrpn-client-ros`
 ```
 >   Could not find a package
 > configuration file provided by "VRPN"
