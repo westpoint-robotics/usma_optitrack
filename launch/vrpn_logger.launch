@@ -1,13 +1,13 @@
 <launch>
     <!-- Launch arguments -->
     <arg name="pose_msg"        default="/vrpn_client_node/Ardrone/pose"/>
-    <arg name="filepath"        default="/home/benjamin/ros/data/"/>
+    <arg name="filepath"        default="/home/$(env USER)/ros/data/"/>
     <arg name="matlab_prefix"   default="vrpn_Ardrone"/>
     <arg name="run"             default="001"/>
 
     <!-- Start the node to log pose messages   -->
     <node pkg="usma_optitrack" type="vrpn_logger.py" name="logger_$(arg matlab_prefix)" output="screen" >
-        <param name="/run"      value="$(arg run)" />
+        <param name="/run"           value="$(arg run)" />
         <param name="/pose_msg"      value="$(arg pose_msg)" />
         <param name="/filepath"      value="$(arg filepath)" />
         <param name="/matlab_prefix" value="$(arg matlab_prefix)" />
